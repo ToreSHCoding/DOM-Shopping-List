@@ -45,14 +45,13 @@ function createListElement() {
 	var li = document.createElement("li");
 	li.appendChild(document.createTextNode(input.value));
 	li.classList.add("list");
+	li.addEventListener("click", wordCrossToggle);
 	ul.appendChild(li);
 	var listBtn = document.createElement("button");
 	listBtn.textContent = "Delete";
 	listBtn.classList.add("delBtn");
 	li.appendChild(listBtn);
 	input.value = "";
-
-	wordCross();
 }
 
 function addListAfterClick() {
@@ -67,21 +66,23 @@ function addListAfterKeypress(event) {
 	}
 }
 
-// function wordCross() {
-// 	listItem.classlist.toggle("done");
+function wordCrossToggle() {
+	this.classList.toggle("done");
+	console.log(this);
+}
+
+// function wordCrossToggle() {
+// 	Array.from(listItems).forEach(listItem => {
+// 		listItem.addEventListener("click", () => {
+// 			listItem.classList.toggle("done");
+// 			});
+// 		});
 // }
 
-function wordCross() {
-	Array.from(listItems).forEach(listItem => {
-		listItem.addEventListener("click", () => {
-			listItem.classList.toggle("done");
-			console.log(listItem)
-			});
-		});
+for (var i = 0; i < listItems.length; i++) {
+	listItems[i].addEventListener("click", wordCrossToggle);
 }
 
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
-
-wordCross();
