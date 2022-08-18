@@ -37,6 +37,7 @@ var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
 var listItems = document.getElementsByClassName("list");
 var delBtn = document.getElementsByClassName("delBtn");
+var delAll = document.getElementById("delAll");
 
 function inputLength() {
 	return input.value.length;
@@ -103,6 +104,12 @@ function delListItem() {
 	this.parentNode.remove()
 }
 
+function delAllList() {
+	Array.from(listItems).forEach(listItem => {
+		listItem.remove()
+	})
+}
+
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
@@ -116,3 +123,5 @@ for (var i = 0; i < listItems.length; i++) {
 for (var i = 0; i < delBtn.length; i++) {
 	delBtn[i].addEventListener("click", delListItem)
 }
+
+delAll.addEventListener("click", delAllList)
