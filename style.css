@@ -1,7 +1,5 @@
 body {
-  display: flex;
-  justify-content: center;
-  background: url(https://img.freepik.com/free-vector/realistic-wood-texture-background_87521-3153.jpg?w=2000);
+  
 }
 
 #main-box {
@@ -11,9 +9,11 @@ body {
   flex-direction: column;
   border: 3px solid rgb(148, 148, 148);
   padding: 10px 50px;
-  width: 1000px;
+  margin: 0 auto;
+  /* width: 1000px; */
   min-height: 95vh;
   background-color: whitesmoke;
+  position: relative;
 }
 
 #title {
@@ -55,6 +55,7 @@ body {
   display: flex;
   width: 600px;
   margin-bottom: 1.2rem;
+  flex-wrap: wrap;
 }
 
 #userinput {
@@ -113,6 +114,7 @@ body {
   font-size: 30px;
   font-family: 'Shadows Into Light', cursive;
   color: darkblue;
+  position: relative;
 }
 
 .line-break {
@@ -153,21 +155,4 @@ body {
 
 #delAll:hover {
   background-color: red;
-}
-
-@media screen and (max-width: 600px) {
-  
-  /* body {
-    background-color: lightblue;
-    width: 100%;
-  }
-
-  #main-box {
-
-    width: 600px;
-  }
-
-  #ul-tag {
-    width: 500px;
-  } */
 }
