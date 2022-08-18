@@ -56,6 +56,9 @@ function createListElement() {
 	listBtn.addEventListener("click", delListItem);
 	listBtn.classList.add("delBtn");
 	li.appendChild(listBtn);
+	var lineBreak = document.createElement("hr");
+	lineBreak.classList.add("line-break");
+	li.appendChild(lineBreak);
 	input.value = "";
 }
 

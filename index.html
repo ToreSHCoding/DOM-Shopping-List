@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Javascript + DOM</title>
+	<title>Javascript Shopping List</title>
+	<meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="script.js" defer></script>
 </head>
 <body>
 	<div id="main-box">
 		<h1 id="title">Shopping List</h1>
 		<p id="first">Get it done today!</p>
-		<input id="userinput" type="text" placeholder="enter items">
+		<div id="input-div">
+		<input id="userinput" type="text" placeholder="Enter items">
 		<button id="enter">Enter</button>
+		</div>
 		<ul id="ul-tag">
-			<li class="bold red list" random="23">Notebook<button class="delBtn">Delete</button></li>
-			<li class="list">Jello<button class="delBtn">Delete</button></li>
-			<li class="list">Spinach<button class="delBtn">Delete</button></li>
-			<li class="list">Rice<button class="delBtn">Delete</button></li>
-			<li class="list">Birthday Cake<button class="delBtn">Delete</button></li>
-			<li class="list">Candles<button class="delBtn">Delete</button></li>
+			<li class="bold red list" random="23">Notebook<button class="delBtn">Delete </button><hr class="line-break"></li>
+			<li class="list">Jello<button class="delBtn">Delete</button><hr class="line-break"></li>
+			<li class="list">Spinach<button class="delBtn">Delete</button><hr class="line-break"></li>
+			<li class="list">Rice<button class="delBtn">Delete</button><hr class="line-break"></li>
+			<li class="list">Birthday Cake<button class="delBtn">Delete</button><hr class="line-break"></li>
+			<li class="list">Candles<button class="delBtn">Delete</button><hr class="line-break"></li>
 		</ul>
 		<button id="delAll">Delete All</button>
 	</div>
