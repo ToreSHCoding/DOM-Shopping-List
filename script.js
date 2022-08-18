@@ -104,6 +104,7 @@ function delListItem() {
 	this.parentNode.remove()
 }
 
+// function for delAll button to delete all items in the list at once
 function delAllList() {
 	Array.from(listItems).forEach(listItem => {
 		listItem.remove()
