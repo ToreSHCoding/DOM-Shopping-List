@@ -45,6 +45,7 @@ function createListElement() {
 	var li = document.createElement("li");
 	li.appendChild(document.createTextNode(input.value));
 	li.classList.add("list");
+	// allows wordCrossToggle() to work with newly created li elements from DOM
 	li.addEventListener("click", wordCrossToggle);
 	ul.appendChild(li);
 	var listBtn = document.createElement("button");
@@ -66,9 +67,9 @@ function addListAfterKeypress(event) {
 	}
 }
 
+// function to toggle line-through on text of li
 function wordCrossToggle() {
 	this.classList.toggle("done");
-	console.log(this);
 }
 
 // function wordCrossToggle() {
@@ -79,9 +80,25 @@ function wordCrossToggle() {
 // 		});
 // }
 
+// for loop that allows wordCrossToggle() on existing li elements within HTML
 for (var i = 0; i < listItems.length; i++) {
 	listItems[i].addEventListener("click", wordCrossToggle);
 }
+
+// ======ALTERNATIVE WAY TO MAKE WORDCROSS TOGGLE WORK=======
+
+// var ulTag = document.getElementById("ul-tag");
+
+// ulTag.addEventListener("click", function (e) {
+// 	target = e.target;
+
+// 	if (target.matches("li")) {
+// 		target.classList.toggle("done")
+// 	}
+// 	console.log(target);
+// })
+
+// ===========================================================
 
 button.addEventListener("click", addListAfterClick);
 
